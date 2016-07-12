@@ -19,8 +19,9 @@
     getHTTP('archery');
     getHTTP('tabletennis');
     getHTTP('modernpentathlon');
-    getHTTP('canoe');
     getHTTP('taekwondo');
+    getHTTP('canoe');
+
 
     function getHTTP(sport) {
       $http({method: 'GET', url: '/olympics/' + sport}).then(handleSuccess, handleFailure);

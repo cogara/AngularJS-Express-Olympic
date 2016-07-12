@@ -1,7 +1,7 @@
 var router = require('express').Router();
 
 var taekwondoAthletes = {
-  sport: 'taekwondo',
+  sport: 'Taekwondo',
   athletes: [
     {name: 'Jackie Galloway', origin: 'Wylie, TX'},
     {name: 'Stephen Lambdin', origin: 'Rockwall, TX'},

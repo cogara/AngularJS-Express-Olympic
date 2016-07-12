@@ -10,6 +10,10 @@
   function AthleteController($scope, $http) {
     const vm = this;
 
+    vm.athletesList = [];
+    vm.getHTTP = getHTTP;
+    vm.randomAthleteList = [];
+
     getHTTP('archery');
     getHTTP('tabletennis');
     getHTTP('modernpentathlon');
@@ -22,13 +26,23 @@
 
     function handleSuccess(response) {
       let data = response.data;
-      console.log(data.sport, data.athletes);
+      randomAthlete(data);
+      // console.log(data.sport, data.athletes);
     }
 
     function handleFailure(response) {
       console.log('failed');
     }
-    vm.test = 'testing';
+
+    function randomAthlete(sportData) {
+      let sport = sportData.sport;
+      let athletes = sportData.athletes;
+      let numAthletes = athletes.length;
+      let randomAthlete = Math.floor(Math.random() * (numAthletes));
+      vm.randomAthleteList.push({sport: sport, name: athletes[randomAthlete].name, origin: athletes[randomAthlete].origin});
+      console.log(athletes[randomAthlete]);
+    }
+
   }
 
 })();

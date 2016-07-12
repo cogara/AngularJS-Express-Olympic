@@ -7,7 +7,16 @@
   </head>
   <body ng-controller="AthleteController as vm">
     <h1>Hello World</h1>
-    <button>Generate!</button>
-    <h2>{{vm.test}}</h2>
+    <button ng-click="vm.getHTTP('archery')">Generate Archer!</button>
+    <button ng-click="vm.getHTTP('tabletennis')">Generate Table Tennis!</button>
+    <button ng-click="vm.getHTTP('modernpentathlon')">Generate Modern Penthathlon!</button>
+    <button ng-click="vm.getHTTP('taekwondo')">Generate taekwondo!</button>
+    <button ng-click="vm.getHTTP('canoe')">Generate Canoe!</button>
+    <ul>
+      <li class="athlete-display" ng-repeat="athlete in vm.randomAthleteList | orderBy: 'athlete.name'">
+        <h3 class="athlete-sport">{{athlete.sport}}:</h3>
+        <p class="athlete-name-origin"> {{athlete.name}}, {{athlete.origin}} </p>
+      </li>
+    </ul>
   </body>
 </html>

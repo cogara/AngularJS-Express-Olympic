@@ -8,7 +8,7 @@ var modernPentathlonAthletes = [
 
 router.get('/', function(request, response) {
   console.log('in modern pent');
-  response.send('modern pent!');
+  response.send(modernPentathlonAthletes);
 })
 
 

@@ -10,7 +10,7 @@ var canoeAthletes = [
 
 router.get('/', function(request, response) {
   console.log('in canoe');
-  response.send('Canoe!');
+  response.send(canoeAthletes);
 })
 
 

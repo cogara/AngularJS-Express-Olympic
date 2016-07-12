@@ -1,6 +1,6 @@
 var router = require('express').Router();
 
-var archerAthletes = [
+var archeryAthletes = [
   {name: 'Mackenzie Brown', origin: 'Flint, TX'},
   {name: 'Brady Ellison', origin: 'Globe, AZ'},
   {name: 'Zach Garrett', origin: 'Wellington, MO'},
@@ -9,7 +9,7 @@ var archerAthletes = [
 
 router.get('/', function(request, response) {
   console.log('in archery');
-  response.send('Archery!');
+  response.send(archeryAthletes);
 })
 
 

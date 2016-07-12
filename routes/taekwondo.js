@@ -9,7 +9,7 @@ var taekwondoAthletes = [
 
 router.get('/', function(request, response) {
   console.log('in taekwondo');
-  response.send('taekwondo!');
+  response.send(taekwondoAthletes);
 })
 
 

@@ -12,10 +12,10 @@
     <button ng-click="vm.getHTTP('modernpentathlon')">Generate Modern Penthathlon!</button>
     <button ng-click="vm.getHTTP('taekwondo')">Generate taekwondo!</button>
     <button ng-click="vm.getHTTP('canoe')">Generate Canoe!</button>
+    <button ng-click="vm.testLog()">Show random athlete array</button>
     <ul>
-      <li class="athlete-display" ng-repeat="athlete in vm.randomAthleteList | orderBy: 'athlete.name'">
-        <h3 class="athlete-sport">{{athlete.sport}}:</h3>
-        <p class="athlete-name-origin"> {{athlete.name}}, {{athlete.origin}} </p>
+      <li class="athlete-display" ng-repeat="athlete in vm.randomAthleteList">
+        <h3 class="athlete-sport">{{athlete.name}}, {{athlete.sport}}</h3>
       </li>
     </ul>
   </body>

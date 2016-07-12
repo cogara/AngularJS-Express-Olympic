@@ -1,12 +1,12 @@
 var router = require('express').Router();
 
 var archeryAthletes = {
-  sport: 'Archery',
+  sport: 'archery',
   athletes: [
-    {name: 'Mackenzie Brown', origin: 'Flint, TX'},
-    {name: 'Brady Ellison', origin: 'Globe, AZ'},
-    {name: 'Zach Garrett', origin: 'Wellington, MO'},
-    {name: 'Jake Kaminski', origin: 'Gainesville, FA'}
+    {name: 'Mackenzie Brown', origin: 'Flint, TX', sport: 'Archery'},
+    {name: 'Brady Ellison', origin: 'Globe, AZ', sport: 'Archery'},
+    {name: 'Zach Garrett', origin: 'Wellington, MO', sport: 'Archery'},
+    {name: 'Jake Kaminski', origin: 'Gainesville, FA', sport: 'Archery'}
   ]};
 
 router.get('/', function(request, response) {

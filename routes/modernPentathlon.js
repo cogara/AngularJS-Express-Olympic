@@ -1,11 +1,11 @@
 var router = require('express').Router();
 
 var modernPentathlonAthletes = {
-  sport: 'Modern Penthathlon',
+  sport: 'modernPentathlon',
   athletes: [
-    {name: 'Isabella Isaksen', origin: 'Fayettevill, AR'},
-    {name: 'Margaux Isaksen', origin: 'Fayetteville, AR'},
-    {name: 'Nathan Schrimsher', origin: 'Roswell, NM'}
+    {name: 'Isabella Isaksen', origin: 'Fayettevill, AR', sport: 'Modern Pentathlon'},
+    {name: 'Margaux Isaksen', origin: 'Fayetteville, AR', sport: 'Modern Pentathlon'},
+    {name: 'Nathan Schrimsher', origin: 'Roswell, NM', sport: 'Modern Pentathlon'}
   ]};
 
 router.get('/', function(request, response) {

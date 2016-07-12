@@ -1,14 +1,14 @@
 var router = require('express').Router();
 
 var tableTennisAthletes = {
-  sport: 'Table Tennis',
+  sport: 'tableTennis',
   athletes: [
-    {name: 'Yijun Feng', origin: 'Atlanta, GA'},
-    {name: 'Kanak Jha', origin: 'Milpitas, CA'},
-    {name: 'Timothy Wang', origin: 'Houston, TX'},
-    {name: 'Jennifer Wu', origin: 'Fort Lee, NJ'},
-    {name: 'Lily Zhang', origin: 'Palo Alto, CA'},
-    {name: 'Jiaqi Zheng', origin: 'Fremont, CA'}
+    {name: 'Yijun Feng', origin: 'Atlanta, GA', sport: 'Table Tennis'},
+    {name: 'Kanak Jha', origin: 'Milpitas, CA', sport: 'Table Tennis'},
+    {name: 'Timothy Wang', origin: 'Houston, TX', sport: 'Table Tennis'},
+    {name: 'Jennifer Wu', origin: 'Fort Lee, NJ', sport: 'Table Tennis'},
+    {name: 'Lily Zhang', origin: 'Palo Alto, CA', sport: 'Table Tennis'},
+    {name: 'Jiaqi Zheng', origin: 'Fremont, CA', sport: 'Table Tennis'}
   ]};
 
 router.get('/', function(request, response) {

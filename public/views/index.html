@@ -7,16 +7,18 @@
   </head>
   <body ng-controller="AthleteController as vm">
     <h1>Hello World</h1>
-    <button ng-click="vm.randomAthlete('archery')">Generate Archer!</button>
-    <button ng-click="vm.randomAthlete('tableTennis')">Generate Table Tennis!</button>
-    <button ng-click="vm.randomAthlete('modernPentathlon')">Generate Modern Penthathlon!</button>
-    <button ng-click="vm.randomAthlete('taekwondo')">Generate taekwondo!</button>
-    <button ng-click="vm.randomAthlete('canoeKayak')">Generate Canoe!</button>
+    <button ng-click="vm.randomAthlete('archery')">Random Archer!</button>
+    <button ng-click="vm.randomAthlete('tableTennis')">Random Table Tennis!</button>
+    <button ng-click="vm.randomAthlete('modernPentathlon')">Random Modern Penthathlon!</button>
+    <button ng-click="vm.randomAthlete('taekwondo')">Random taekwondo!</button>
+    <button ng-click="vm.randomAthlete('canoeKayak')">Random Canoe!</button><br />
+    <button ng-click="vm.randomAll()">Randomize All</button>
     <button ng-click="vm.testLog()">Show random athlete array</button>
     <ul>
       <li class="athlete-display" ng-repeat="athlete in vm.randomAthleteList">
-        <h4> {{athlete.sport}}</h4>
-        <p class="athlete">{{athlete.name}}, {{athlete.origin}}</p>
+        <h4>{{athlete.sport}}</h4>
+        <p>{{athlete.name}}</p>
+        <p>{{athlete.origin}}</p>
       </li>
     </ul>
   </body>

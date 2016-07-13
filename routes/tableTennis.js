@@ -1,5 +1,6 @@
 var router = require('express').Router();
 
+//set table tennis athletes object to be returned to user
 var tableTennisAthletes = {
   sport: 'tableTennis',
   athletes: [

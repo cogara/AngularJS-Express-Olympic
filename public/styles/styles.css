@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+}
+
+@media (max-width: 870px) {
+  body {
+    font-size: .8rem;
+  }
+}
+
+.chosen-sport__display {
+  flex: 0 95%;
+  order: 2;
+  color: blue;
+  height: 250px;
+  background-image: url('/imgs/bg-img.png');
+  background-size: 150px 150px;
+  margin: 10px auto;
+  padding: 10px 0;
+  border-radius: 7px;
+  position: relative;
+}
+
+.winner {
+  letter-spacing: .5rem;
+  color: white;
+  text-shadow:
+    1px 1px rgb(250,0,0),
+    2px 2px rgb(0,0,250),
+    3px 3px rgb(250,250,250),
+    4px 4px rgb(250,0,0),
+    5px 5px rgb(0,0,250),
+    6px 6px rgb(250,250,250);
+}
+
+.chosen-sport {
+  width: 40%;
+  height: 150px;
+  /*padding: 25px;*/
+  min-width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(250,250,250,.9);
+  border-radius: 5px;
+}
+
+.chosen-sport-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.chosen-sport__name {
+  margin-bottom: 10px;
+}
+
+.container-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.athlete-display__list {
+  /*height: 200px;*/
+  order: 1;
+  margin: 10px auto;
+  flex: 0 95%;
+  flex-wrap: wrap;
+  /*text-align: center;*/
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 750px) {
+  .athlete-display__list {
+    order: 2;
+  }
+  .chosen-sport__display {
+    order: 1;
+  }
+}
+
+.athlete-display__athlete {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  flex: 1 15%;
+  border: 1px solid rgba(0,0,0,.3);
+  border-radius: 3px;
+}
+
+@media (max-width: 750px) {
+  .athlete-display__athlete {
+    flex: 0 100%;
+    margin: 5px 0;
+  }
+}
+
+
+.athlete-display__athlete:not(:last-of-type) {
+  margin-right: 5px;
+}
+
+.athlete-display__athlete-name, .athlete-display__athlete-origin, .athlete-display__sport-name, .btn-athlete-new {
+  flex: 0 100%;
+
+}
+
+.athlete-display__sport-name {
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  padding: 5px 0;
+  margin: 0 0 10px;
+}
+
+.athlete-display__athlete-origin {
+  margin-bottom: 5px;
+}
+
+.btn-athlete-new {
+  background-color: rgba(150,150,150,.5);
+  align-self: flex-end;
+  height: 35px;
+  border: none;
+  outline: none;
+  margin: 3px;
+  border-radius: 0 0 2px 2px;
+  cursor: pointer;
+}
+
+.btn-athlete-new:hover {
+  background-color: rgba(50,50,50,.5);
+}
+
+.flag-gif {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.fireworks-gif {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  bottom: 0;
+}
+
+.flag-left {
+  left: 5%;
+}
+
+.flag-right {
+  right: 5%;
+}
+
+.btn {
+  padding: 5px;
+  margin: 10px 5px;
+  background-color: white;
+  border: 1px solid rgba(0,0,0,.5);
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.btn:hover {
+  background-color: rgba(200,200,200,.8);
+}

@@ -1,0 +1,41 @@
+<html ng-app="olympicAthletes">
+  <head>
+    <meta charset="utf-8">
+    <title>Solo Angular-Express</title>
+    <script src="vendor/angular.min.js" charset="utf-8"></script>
+    <script src="js/client.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+  <body ng-controller="AthleteController as vm">
+
+    <h1>Athlete Selection</h1>
+    <button class='btn' ng-click="vm.randomAll()">Randomize All</button>
+    <button class="btn" ng-click="vm.testLog()">Test Log: Show Arrays and values</button><br />
+    Select Winner: <select ng-model="vm.selectedSport" ng-options="sport.sportDisplay for sport in vm.sportSelect track by sport.sportName"></select>
+    <div class="container-flex">
+      <div class="athlete-display__list">
+        <div class="athlete-display__athlete" ng-repeat="(key,athlete) in vm.randomAthleteList">
+          <h3 class="athlete-display__sport-name">{{athlete.sport}}</h3>
+          <p class="athlete-display__athlete-name">{{athlete.name}}</p>
+          <p class="athlete-display__athlete-origin">{{athlete.origin}}</p>
+          <button class="btn-athlete-new" ng-click="vm.randomAthlete(key)">Get New {{athlete.sport}} Athlete</button>
+        </div>
+      </div>
+
+      <div class="chosen-sport__display" ng-show="vm.selectedSport.show">
+        <h1 class="winner">Winner!</h1>
+        <div class="chosen-sport">
+          <img src="imgs/flag.gif" class="flag-gif flag-left" alt="">
+          <div class="chosen-sport-container">
+            <h2 class="chosen-sport__name">{{vm.randomAthleteList[vm.selectedSport.sportName].sport}}</h2>
+            <p class="chosen-athlete__name">{{vm.randomAthleteList[vm.selectedSport.sportName].name}}</p>
+            <p class="chosen-athlete__origin">{{vm.randomAthleteList[vm.selectedSport.sportName].origin}}</p>
+          </div>
+          <img src="imgs/flag.gif" class="flag-gif flag-right" alt="">
+        </div>
+        <img src="imgs/fireworks.gif" class="fireworks-gif flag-left" alt="">
+        <img src="imgs/fireworks.gif" class="fireworks-gif flag-right" alt="">
+      </div>
+    </div>
+  </body>
+</html>
